@@ -1,0 +1,39 @@
+<!-- Xml UI. See documentation: https://api.tabletopsimulator.com/ui/introUI/ -->
+<Panel id="Player Turn" visibility="Black">
+    <GridLayout childAlignment="UpperRight" cellSize="150 150" padding="50 50">
+        <Button id="rollDie" onClick="rollDie" fontSize="25" text="Roll Die"/>
+    </GridLayout>
+    <Text active="false" fontSize="50" outline="Black" color="White" alignment="UpperCenter" text="Please Pick A Game Piece" offsetXY="0 -200"/>
+</Panel>
+<Panel id="Game Start">
+    <GridLayout childAlignment="UpperRight" cellSize="150 150" padding="50 50" constraint="FixedColumnCount" constraintCount="1">
+        <Button id="startGame" onClick="startGame" fontSize="50" text="Start Game"/>
+        <Button visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="rollForOrder" onClick="rollForOrder" fontSize="25" text="Roll For Order"/>
+    </GridLayout>
+</Panel>
+<Panel id="Game Setup">
+    <Text fontSize="50" outline="Black" color="White" alignment="UpperCenter" text="Please Pick A Game Piece" offsetXY="0 -200"/>
+    <GridLayout childAlignment="MiddleCenter" constraint="FixedRowCount" constraintCount="2" spacing="10 10" cellSize="250 250">
+        <Button image="Boat Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Boat" outline="Black" onClick="selectPiece" tooltip="Boat" tooltipPosition="Above"/>
+        <Button image="Hat Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Hat" outline="Black" onClick="selectPiece" tooltip="Hat" tooltipPosition="Above"/>
+        <Button image="Car Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Car" outline="Black" onClick="selectPiece" tooltip="Car" tooltipPosition="Above"/>
+        <Button image="Thimble Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Thimble" outline="Black" onClick="selectPiece" tooltip="Thimble" tooltipPosition="Above"/>
+        <Button image="Wheelbarrow Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Wheelbarrow" outline="Black" onClick="selectPiece" tooltip="Wheelbarrow" tooltipPosition="Above"/>
+        <Button image="Boot Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Boot" outline="Black" onClick="selectPiece" tooltip="Boot" tooltipPosition="Above"/>
+        <Button image="Iron Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Iron" outline="Black" onClick="selectPiece" tooltip="Iron" tooltipPosition="Above"/>
+        <Button image="Artillery Image" visibility="White|Brown|Red|Orange|Yellow|Green|Teal|Blue|Purple|Pink|Grey|Black" id="Artillery" outline="Black" onClick="selectPiece" tooltip="Artillery" tooltipPosition="Above"/>
+    </GridLayout>
+</Panel>
+<Panel id="Property Purchase" image="Popup Window" width="300" height="300" allowDragging="true" returnToOriginalPositionWhenReleased="false" active="false">
+    <TableLayout>
+        <Row>
+            <Text text="Do you want to purchase the property Medeterannian Ave?" width="250" height="100" horizontalOverflow="Wrap" fontStyle="Bold" fontSize="20" color="Black" rectAlignment="UpperCenter" alignment="LowerCenter"/>
+        </Row>
+        <Row>
+            <GridLayout childAlignment="MiddleCenter" constraint="FixedColumnCount" constraintCount="2" spacing="10 10" cellSize="100 100">
+                <Button visibility="White" id="Yes" text="Yes" tooltip="You will pay 200" outline="Black" onClick="purchaseProperty"/>
+                <Button visibility="White" id="No" text="No" tooltip="This property will be auctioned" outline="Black" onClick="auctionProperty"/>
+            </GridLayout>
+        </Row>
+    </TableLayout>
+</Panel>
